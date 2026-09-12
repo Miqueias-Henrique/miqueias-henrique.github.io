@@ -4,6 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Miqueias Carvalho - Banco de Dados do Omnitrix</title>
+<link rel="icon" type="image/png" href="icon.png">
+<link rel="shortcut icon" type="image/png" href="icon.png">
+<link rel="apple-touch-icon" href="icon.png">
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;500;700;900&display=swap');
 
@@ -57,17 +60,77 @@
   /* NAVBAR - PAINEL DO OMNITRIX */
   nav {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
     gap: 15px;
-    padding: 20px;
-    background: rgba(0, 15, 5, 0.9);
+    padding: 12px 30px;
+    background: rgba(0, 15, 5, 0.92);
     border-bottom: 3px solid var(--omnitrix-green);
     box-shadow: 0 0 25px var(--omnitrix-glow);
     position: sticky;
     top: 0;
     z-index: 100;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(8px);
     flex-wrap: wrap;
+  }
+
+  .nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    text-decoration: none;
+    user-select: none;
+    transition: opacity 0.2s ease;
+  }
+
+  .nav-brand:hover {
+    opacity: 0.95;
+  }
+
+  .nav-logo {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 0 15px var(--omnitrix-glow);
+    border: 2px solid var(--omnitrix-green);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+  }
+
+  .nav-brand:hover .nav-logo {
+    transform: rotate(90deg) scale(1.1);
+    box-shadow: 0 0 25px var(--omnitrix-green);
+  }
+
+  .nav-brand-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.15;
+  }
+
+  .nav-brand-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 15px;
+    font-weight: 900;
+    color: var(--omnitrix-green);
+    letter-spacing: 2px;
+    text-shadow: 0 0 8px var(--omnitrix-glow);
+  }
+
+  .nav-brand-sub {
+    font-size: 11px;
+    color: var(--text-dim);
+    letter-spacing: 1.5px;
+    font-weight: bold;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .nav-btn {
@@ -287,6 +350,15 @@
   }
 
   @media(max-width: 768px) {
+    nav {
+      justify-content: center;
+      padding: 12px 15px;
+      gap: 12px;
+    }
+    .nav-brand {
+      justify-content: center;
+      width: 100%;
+    }
     .panel-grid { grid-template-columns: 1fr; }
     .character-sheet { flex-direction: column; text-align: center; }
     .status-row small { display: none; }
@@ -446,10 +518,19 @@
 <body>
 
 <nav>
-  <button class="nav-btn active" onclick="switchTab('dossie', this)">01. Dossiê</button>
-  <button class="nav-btn" onclick="switchTab('atributos', this)">02. Atributos</button>
-  <button class="nav-btn" onclick="switchTab('missoes', this)">03. Missões</button>
-  <button class="nav-btn" onclick="switchTab('frequencia', this)">04. Frequência</button>
+  <div class="nav-brand" onclick="switchTab('dossie', document.querySelector('.nav-btn'))" title="Omnitrix // Miqueias Carvalho">
+    <img src="icon.png" alt="Omnitrix MC Logo" class="nav-logo">
+    <div class="nav-brand-text">
+      <span class="nav-brand-title">OMNITRIX</span>
+      <span class="nav-brand-sub">MC // DEV</span>
+    </div>
+  </div>
+  <div class="nav-links">
+    <button class="nav-btn active" onclick="switchTab('dossie', this)">01. Dossiê</button>
+    <button class="nav-btn" onclick="switchTab('atributos', this)">02. Atributos</button>
+    <button class="nav-btn" onclick="switchTab('missoes', this)">03. Missões</button>
+    <button class="nav-btn" onclick="switchTab('frequencia', this)">04. Frequência</button>
+  </div>
 </nav>
 
 <div class="status-screen">
@@ -695,7 +776,9 @@
     });
     
     document.getElementById(tabId).classList.add('active');
-    btnElement.classList.add('active');
+    if (btnElement) {
+      btnElement.classList.add('active');
+    }
   }
 </script>
 
