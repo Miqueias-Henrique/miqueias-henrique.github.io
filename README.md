@@ -22,7 +22,8 @@ Construído em arquitetura **100% autossuficiente (Zero Dependencies)** em um ú
 - ⌚ **Dial Rotativo 3D & Obturador Ampulheta do Omnitrix**: A moldura do avatar simula o disco mecânico do relógio com anel cibernético externo, girando 90° e acionando o obturador em ampulheta do Omnitrix a cada transformação (por clique, botões `◀`/`▶` ou teclas `1`-`4`).
 - 🧬 **Banco de DNA Dinâmico**: Ao alternar entre as abas, a foto do perfil sofre um pulso energético e se transforma em diferentes formas do hospedeiro.
 - 🌐 **Canvas Mecamorfo Galvânico (Ultra-T)**: Fundo vivo em HTML5 Canvas com trilhas de circuito geométricas e pulsos de energia inspirados no Ultra-T.
-- 🔓 **Controle Mestre & Modos do Núcleo**: Botão para desbloquear todas as 4 seções simultaneamente na tela e seletor de energia do núcleo (Verde Operacional, Ciano Calibração Azmuth e Laranja Sobrecarga).
+- 🖥️ **Cockpit HUD em Tela Dividida**: Painel lateral fixo do Hospedeiro/Omnitrix à esquerda e visor dinâmico à direita que troca imediatamente de tela a cada aba selecionada.
+- 🎨 **Modos de Energia do Núcleo**: Seletor de estado energético da interface (Verde Operacional, Ciano Calibração Azmuth e Laranja Sobrecarga).
 - 🔊 **Efeito Sonoro Alienígena (com Toggle SFX)**: Áudio original do acionamento do Omnitrix a cada transformação, com botão `SFX: ON/OFF`.
 - 📊 **Status Sheet RPG Segmentada**: Barras de telemetria (`SQL`, `SYS`, `.NET`, `OPS`), terminal interativo com comandos rápidos (`$ objetivo`, `$ producao`, `$ stack`) e ficha completa do hospedeiro.
 - 📄 **Extração de Dossiê (Download CV)**: Botão de download direto do currículo atualizado em PDF integrado no Hero e na aba do Dossiê.
