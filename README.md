@@ -19,12 +19,14 @@ Construído em arquitetura **100% autossuficiente (Zero Dependencies)** em um ú
 
 ## 🎮 Funcionalidades Principais
 
-- ⌚ **Dial Rotativo do Omnitrix**: A moldura do avatar simula o disco mecânico do relógio, girando 90° com física e recuo elástico a cada troca de aba.
-- 🧬 **Banco de DNA Dinâmico**: Ao alternar entre as abas, a foto do perfil sofre um clarão verde neon e se transforma em diferentes formas do hospedeiro.
-- 🔊 **Efeito Sonoro Alienígena**: Áudio original sintetizado do acionamento do Omnitrix dispara perfeitamente a cada troca de seção.
-- 📊 **Status Sheet RPG**: Barras dinâmicas de atributos (PWR - Carga de Sistema, LOG - Lógica de Banco, APT - Adaptabilidade) e ficha de nível.
-- 📄 **Extração de Dossiê (Download CV)**: Botão de download direto do currículo em PDF integrado na aba do Dossiê.
-- 📱 **Totalmente Responsivo**: Adaptado tanto para desktops quanto para dispositivos móveis com tema Dark Mode de alto contraste (Verde Neon `#00ff41` & Preto Metálico).
+- ⌚ **Dial Rotativo 3D & Obturador Ampulheta do Omnitrix**: A moldura do avatar simula o disco mecânico do relógio com anel cibernético externo, girando 90° e acionando o obturador em ampulheta do Omnitrix a cada transformação (por clique, botões `◀`/`▶` ou teclas `1`-`4`).
+- 🧬 **Banco de DNA Dinâmico**: Ao alternar entre as abas, a foto do perfil sofre um pulso energético e se transforma em diferentes formas do hospedeiro.
+- 🌐 **Canvas Mecamorfo Galvânico (Ultra-T)**: Fundo vivo em HTML5 Canvas com trilhas de circuito geométricas e pulsos de energia inspirados no Ultra-T.
+- 🔓 **Controle Mestre & Modos do Núcleo**: Botão para desbloquear todas as 4 seções simultaneamente na tela e seletor de energia do núcleo (Verde Operacional, Ciano Calibração Azmuth e Laranja Sobrecarga).
+- 🔊 **Efeito Sonoro Alienígena (com Toggle SFX)**: Áudio original do acionamento do Omnitrix a cada transformação, com botão `SFX: ON/OFF`.
+- 📊 **Status Sheet RPG Segmentada**: Barras de telemetria (`SQL`, `SYS`, `.NET`, `OPS`), terminal interativo com comandos rápidos (`$ objetivo`, `$ producao`, `$ stack`) e ficha completa do hospedeiro.
+- 📄 **Extração de Dossiê (Download CV)**: Botão de download direto do currículo atualizado em PDF integrado no Hero e na aba do Dossiê.
+- 📱 **Totalmente Responsivo**: Adaptado tanto para desktops quanto para dispositivos móveis.
 
 ---
 
@@ -32,10 +34,10 @@ Construído em arquitetura **100% autossuficiente (Zero Dependencies)** em um ú
 
 | Seção | Nome Temático | Conteúdo |
 |---|---|---|
-| **01** | **Dossiê** | Origem do hospedeiro, lore profissional, resumo de formação e botão de download do PDF |
-| **02** | **Atributos** | Arsenal de tecnologias (SQL, VB6, Java, HTML, C#, Kotlin), cursos e qualificações |
-| **03** | **Missões** | Histórico de batalhas (experiência profissional na Zetti) e repositórios de projetos |
-| **04** | **Frequência** | Conexões de rede e contato direto (GitHub, LinkedIn, E-mail e WhatsApp/Telefone) |
+| **01** | **Dossiê** | Resumo profissional, competências comportamentais (traços genéticos) e download do currículo em PDF |
+| **02** | **Atributos** | Competências técnicas (C#/.NET, VB6, Java, SQL Server, MySQL, APIs REST/Swagger, Git, Jira, Docker), formação (UNIFAN), cursos e idiomas |
+| **03** | **Missões** | Experiência profissional (Zetti e Carvalho Forros e Divisórias) e repositórios de projetos no GitHub |
+| **04** | **Frequência** | Conexões de rede e contato direto com cópia rápida (GitHub, LinkedIn, E-mail e Telefone) |
 
 ---
 
