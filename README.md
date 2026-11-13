@@ -33,12 +33,12 @@ Construído em arquitetura **100% autossuficiente (Zero Dependencies)** em um ú
 
 ## 📂 Estrutura das Abas
 
-| Seção | Nome Temático | Conteúdo |
+| Seção | Nome da Aba | Conteúdo |
 |---|---|---|
-| **01** | **Dossiê** | Resumo profissional, competências comportamentais (traços genéticos) e download do currículo em PDF |
-| **02** | **Atributos** | Competências técnicas (C#/.NET, VB6, Java, SQL Server, MySQL, APIs REST/Swagger, Git, Jira, Docker), formação (UNIFAN), cursos e idiomas |
-| **03** | **Missões** | Experiência profissional (Zetti e Carvalho Forros e Divisórias) e repositórios de projetos no GitHub |
-| **04** | **Frequência** | Conexões de rede e contato direto com cópia rápida (GitHub, LinkedIn, E-mail e Telefone) |
+| **01** | **Resumo** | Resumo profissional, destaques da carreira, competências comportamentais (Soft Skills) e download do currículo em PDF |
+| **02** | **Experiência & Projetos** | Experiência profissional (Zetti e Carvalho Forros e Divisórias) e repositórios de projetos no GitHub |
+| **03** | **Competências & Formação** | Competências técnicas (C#/.NET, VB6, Java, SQL Server, MySQL, APIs REST/Swagger, Git, Jira, Docker), formação (UNIFAN), cursos e idiomas |
+| **04** | **Contato** | Canais de contato direto com cópia rápida (E-mail, Telefone/WhatsApp, LinkedIn e GitHub) |
 
 ---
 
