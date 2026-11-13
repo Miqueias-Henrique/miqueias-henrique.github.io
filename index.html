@@ -799,6 +799,69 @@
     transform: translateY(-1px);
   }
 
+  .btn-secondary-contact {
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: var(--omnitrix-soft);
+    border: 1px solid var(--omnitrix-primary);
+    color: var(--text-white);
+    padding: 9px 14px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 13px;
+    transition: all 0.2s ease;
+  }
+
+  .btn-secondary-contact:hover {
+    background: var(--omnitrix-primary);
+    color: var(--btn-text);
+    box-shadow: 0 0 14px var(--omnitrix-glow);
+  }
+
+  .cta-trust-seal {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--text-muted);
+    text-align: center;
+    padding: 4px 6px;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px dashed rgba(255, 255, 255, 0.12);
+    line-height: 1.35;
+  }
+
+  .cta-trust-seal strong {
+    color: var(--omnitrix-primary);
+    font-weight: 600;
+  }
+
+  .recommended-card {
+    border-color: var(--omnitrix-primary) !important;
+    box-shadow: 0 0 20px var(--omnitrix-soft), inset 0 0 16px var(--omnitrix-soft);
+  }
+
+  .recommended-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-family: var(--font-mono);
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    padding: 3px 9px;
+    border-radius: 4px;
+    background: linear-gradient(90deg, var(--omnitrix-primary), var(--omnitrix-secondary));
+    color: var(--btn-text);
+    box-shadow: 0 0 10px var(--omnitrix-glow);
+    margin-bottom: 6px;
+    width: fit-content;
+  }
+
   .sidebar-quick-links {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -1941,6 +2004,14 @@
           Baixar Currículo (.PDF)
         </a>
 
+        <a href="https://wa.me/5562998421308" target="_blank" rel="noopener noreferrer" class="btn-secondary-contact">
+          Chamar no WhatsApp ↗
+        </a>
+
+        <div class="cta-trust-seal">
+          <strong>✓ PDF direto (1 pág.)</strong> · Sem cadastro · Goiânia/Remoto
+        </div>
+
         <div class="sidebar-quick-links">
           <a href="https://github.com/Miqueias-Henrique" target="_blank" rel="noopener noreferrer" class="btn-quick-link">
             GitHub (8 Proj.) ↗
@@ -1956,9 +2027,9 @@
 
       <div class="screen-banner" id="screenBanner">
         <div>
-          <p class="screen-banner-kicker" id="bannerKicker">SEÇÃO 01 DE 04 // PERFIL PROFISSIONAL</p>
-          <h2 class="screen-banner-title" id="bannerTitle">Resumo Profissional &amp; Perfil</h2>
-          <p class="screen-banner-desc" id="bannerDesc">Visão geral da minha experiência prática em banco de dados, sistemas em produção e projetos no backend.</p>
+          <p class="screen-banner-kicker" id="bannerKicker">SEÇÃO 01 DE 04 // DISPONÍVEL EM GOIÂNIA, GO OU REMOTO</p>
+          <h2 class="screen-banner-title" id="bannerTitle">Backend Júnior com Experiência Real em Produção</h2>
+          <p class="screen-banner-desc" id="bannerDesc">Atuação diária mantendo sistemas de múltiplas farmácias na Zetti (SQL Server &amp; VB6) + 8 projetos práticos no GitHub.</p>
         </div>
         <span class="universe-badge" onclick="cycleCoreMode()" title="Versão selecionada">
           <span class="mode-dual-dot"></span>
@@ -1969,20 +2040,20 @@
       <section id="dossie" class="tab-pane active" role="tabpanel">
         <div class="dossie-highlights">
           <div class="highlight-box">
-            <span>Objetivo</span>
+            <span>Foco de Contratação</span>
             <strong>Dev. Júnior (Backend)</strong>
           </div>
           <div class="highlight-box">
-            <span>Atuação Atual</span>
-            <strong>Estagiário @ Zetti</strong>
+            <span>Impacto em Produção</span>
+            <strong>Múltiplas Farmácias @ Zetti</strong>
           </div>
           <div class="highlight-box">
-            <span>Banco de Dados</span>
-            <strong>SQL Server, MySQL &amp; PG</strong>
+            <span>Domínio de Dados</span>
+            <strong>Queries, Views &amp; Procedures</strong>
           </div>
           <div class="highlight-box">
-            <span>Portfólio no GitHub</span>
-            <strong>8 Projetos Publicados</strong>
+            <span>Código Auditável</span>
+            <strong>8 Projetos no GitHub</strong>
           </div>
         </div>
 
@@ -2084,7 +2155,7 @@
         <article class="panel">
           <div class="panel-header">
             <div>
-              <p class="section-kicker">Amostra de Código &amp; Arquitetura</p>
+              <p class="section-kicker">Amostra de Código &amp; Arquitetura (Top 3)</p>
               <h2>Destaques do Portfólio de Projetos</h2>
             </div>
             <button type="button" class="repo-action-btn" onclick="switchTab('missoes', document.querySelector('[data-tab=missoes]'))">
@@ -2093,8 +2164,9 @@
           </div>
 
           <div class="featured-projects-strip">
-            <a href="https://github.com/Miqueias-Henrique/api-gestao-produtos" target="_blank" rel="noopener noreferrer" class="mini-proj-card">
+            <a href="https://github.com/Miqueias-Henrique/api-gestao-produtos" target="_blank" rel="noopener noreferrer" class="mini-proj-card recommended-card">
               <div>
+                <span class="recommended-pill">★ Recomendado p/ Avaliação</span>
                 <strong>api-gestao-produtos ↗</strong>
                 <p>API REST com CRUD paginado, migrations, seeds, validação Yup, documentação Swagger e Docker.</p>
               </div>
@@ -2196,8 +2268,9 @@
             </div>
 
             <div class="repo-list" id="repoListGrid">
-              <div class="repo-card" data-repo-cat="api">
+              <div class="repo-card recommended-card" data-repo-cat="api">
                 <div>
+                  <span class="recommended-pill">★ Recomendado p/ Avaliação Backend</span>
                   <p class="repo-card-kicker">API REST // BACKEND &amp; BANCO DE DADOS</p>
                   <div class="repo-card-top">
                     <a href="https://github.com/Miqueias-Henrique/api-gestao-produtos" target="_blank" rel="noopener noreferrer" class="repo-card-title">
@@ -2600,39 +2673,24 @@
         <article class="panel">
           <div class="panel-header">
             <div>
-              <p class="section-kicker">Canais Diretos</p>
+              <p class="section-kicker">Canais Diretos Sem Fricção</p>
               <h2>Entre em Contato</h2>
             </div>
-            <span class="panel-tag">Goiânia, GO</span>
+            <span class="panel-tag">Goiânia, GO · Remoto</span>
           </div>
 
           <p style="color: var(--text-body); font-size: 15px; max-width: 720px;">
-            Disponível para oportunidades como <strong style="color: var(--omnitrix-primary);">Desenvolvedor de Software Júnior (Backend)</strong>.
-            Fique à vontade para entrar em contato por qualquer um dos canais abaixo:
+            Disponível para entrevistas e oportunidades como <strong style="color: var(--omnitrix-primary);">Desenvolvedor de Software Júnior (Backend)</strong>.
+            Escolha o canal de sua preferência abaixo (sem formulários ou cadastros):
           </p>
 
           <div class="comm-grid">
-            <div class="comm-card">
+            <div class="comm-card recommended-card">
               <div>
-                <span class="comm-channel">E-mail</span>
-                <h3 class="comm-title">miqueiash989@gmail.com</h3>
-                <p class="comm-value">Resposta rápida por e-mail</p>
-              </div>
-              <div class="comm-actions">
-                <a href="mailto:miqueiash989@gmail.com" class="comm-btn">
-                  Enviar E-mail
-                </a>
-                <button type="button" class="comm-btn secondary" onclick="copyText('miqueiash989@gmail.com', 'E-mail copiado: miqueiash989@gmail.com')">
-                  Copiar E-mail
-                </button>
-              </div>
-            </div>
-
-            <div class="comm-card">
-              <div>
-                <span class="comm-channel">Telefone &amp; WhatsApp</span>
+                <span class="recommended-pill">★ Canal Recomendado · Resposta Rápida</span>
+                <span class="comm-channel" style="display: block;">Telefone &amp; WhatsApp</span>
                 <h3 class="comm-title">(62) 99842-1308</h3>
-                <p class="comm-value">Goiânia, GO · Ligação ou WhatsApp</p>
+                <p class="comm-value">Goiânia, GO · Contato direto para agendamento de entrevista</p>
               </div>
               <div class="comm-actions">
                 <a href="https://wa.me/5562998421308" target="_blank" rel="noopener noreferrer" class="comm-btn">
@@ -2640,6 +2698,22 @@
                 </a>
                 <button type="button" class="comm-btn secondary" onclick="copyText('(62) 99842-1308', 'Telefone copiado: (62) 99842-1308')">
                   Copiar Número
+                </button>
+              </div>
+            </div>
+
+            <div class="comm-card">
+              <div>
+                <span class="comm-channel">E-mail Direto</span>
+                <h3 class="comm-title">miqueiash989@gmail.com</h3>
+                <p class="comm-value">Envio em 1 clique ou cópia rápida para seu cliente de e-mail</p>
+              </div>
+              <div class="comm-actions">
+                <a href="mailto:miqueiash989@gmail.com" class="comm-btn">
+                  Enviar E-mail
+                </a>
+                <button type="button" class="comm-btn secondary" onclick="copyText('miqueiash989@gmail.com', 'E-mail copiado: miqueiash989@gmail.com')">
+                  Copiar E-mail
                 </button>
               </div>
             </div>
@@ -2697,9 +2771,9 @@
   const tabMeta = {
     'dossie': {
       label: '01/04 · Resumo',
-      kicker: 'SEÇÃO 01 DE 04 // PERFIL PROFISSIONAL',
-      title: 'Resumo Profissional & Perfil',
-      desc: 'Visão geral da minha experiência prática em banco de dados, sistemas em produção e projetos no backend.'
+      kicker: 'SEÇÃO 01 DE 04 // DISPONÍVEL EM GOIÂNIA, GO OU REMOTO',
+      title: 'Backend Júnior com Experiência Real em Produção',
+      desc: 'Atuação diária mantendo sistemas de múltiplas farmácias na Zetti (SQL Server & VB6) + 8 projetos práticos no GitHub.'
     },
     'missoes': {
       label: '02/04 · Exp. & Projetos',
@@ -2715,9 +2789,9 @@
     },
     'frequencia': {
       label: '04/04 · Contato',
-      kicker: 'SEÇÃO 04 DE 04 // CANAIS DIRETOS',
-      title: 'Contato Direto',
-      desc: 'E-mail, WhatsApp/Telefone, LinkedIn e GitHub.'
+      kicker: 'SEÇÃO 04 DE 04 // CANAIS DIRETOS SEM FRICÇÃO',
+      title: 'Contato Direto para Entrevistas',
+      desc: 'WhatsApp/Telefone (canal recomendado), E-mail direto, LinkedIn e GitHub.'
     }
   };
 
