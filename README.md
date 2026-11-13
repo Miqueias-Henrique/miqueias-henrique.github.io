@@ -21,12 +21,15 @@ Construído em arquitetura **100% autossuficiente (Zero Dependencies)** em um ú
 
 - ⌚ **Dial Rotativo 3D & Obturador Ampulheta do Omnitrix**: A moldura do avatar simula o disco mecânico do relógio com anel cibernético externo, girando 90° e acionando o obturador em ampulheta do Omnitrix a cada transformação (por clique, botões `◀`/`▶` ou teclas `1`-`4`).
 - 🧬 **Banco de DNA Dinâmico**: Ao alternar entre as abas, a foto do perfil sofre um pulso energético e se transforma em diferentes formas do hospedeiro.
-- 🌐 **Canvas Mecamorfo Galvânico (Ultra-T)**: Fundo vivo em HTML5 Canvas com trilhas de circuito geométricas e pulsos de energia inspirados no Ultra-T.
-- 🖥️ **Cockpit HUD em Tela Dividida**: Painel lateral fixo do Hospedeiro/Omnitrix à esquerda e visor dinâmico à direita que troca imediatamente de tela a cada aba selecionada.
-- 🎨 **Modos de Energia do Núcleo**: Seletor de estado energético da interface (Verde Operacional, Ciano Calibração Azmuth e Laranja Sobrecarga).
-- 🔊 **Efeito Sonoro Alienígena (com Toggle SFX)**: Áudio original do acionamento do Omnitrix a cada transformação, com botão `SFX: ON/OFF`.
-- 📊 **Status Sheet RPG Segmentada**: Barras de telemetria (`SQL`, `SYS`, `.NET`, `OPS`), terminal interativo com comandos rápidos (`$ objetivo`, `$ producao`, `$ stack`) e ficha completa do hospedeiro.
-- 📄 **Extração de Dossiê (Download CV)**: Botão de download direto do currículo atualizado em PDF integrado no Hero e na aba do Dossiê.
+- 🌐 **Fundo de Tecnologia Galvaniana (Ben 10 Omniverse & Games)**: Canvas vivo em HTML5 com malha hexagonal pulsante de Galvan Prime, núcleos holográficos de anéis concêntricos rotativos com o símbolo da ampulheta do Omnitrix e trilhas de circuito de 45°/90° com nós duplos (`◎`) e pulsos de energia.
+- 🌌 **Multiverso de Cores do Omnitrix (Sorteio Automático a Cada Acesso)**: Toda vez que alguém acessa ou recarrega o site, o tema alterna automaticamente entre 4 dimensões do Omnitrix (também alternáveis manualmente no topo):
+  - **Ben Prime**: Verde Galvânico & Esmeralda (`#00ff41` / `#00e5a3`)
+  - **Albedo**: Vermelho Ultimatrix & Rubi Negativo (`#ff1e38` / `#ff6b4a`)
+  - **Gwen 10**: Rosa Magenta & Azul Ciano (`#ff2e93` / `#00e5ff`)
+  - **Ben 23**: Dourado & Azul Elétrico (`#ffd000` / `#00a8ff`)
+- 🖥️ **Cockpit HUD de Alta Legibilidade para Recrutadores**: Painel lateral fixo do candidato à esquerda e tela dinâmica à direita com tipografia limpa (`Inter`), títulos diretos e botão `"Ver Currículo Inteiro"`.
+- 🔊 **Efeito Sonoro do Omnitrix (com Toggle `Som: ON/OFF`)**: Áudio original do acionamento do Omnitrix a cada troca de seção ou dimensão.
+- 📄 **Currículo Atualizado em PDF**: Botão de download direto do `Curriculo_Miqueias_Carvalho.pdf` atualizado (embutido em Base64 e disponível na raiz do repositório).
 - 📱 **Totalmente Responsivo**: Adaptado tanto para desktops quanto para dispositivos móveis.
 
 ---

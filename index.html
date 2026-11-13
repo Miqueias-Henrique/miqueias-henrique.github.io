@@ -11,17 +11,31 @@
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@600;700;800;900&family=Share+Tech+Mono&display=swap');
 
-  :root {
-    --bg-void: #040906;
-    --bg-panel: rgba(9, 20, 13, 0.92);
-    --bg-card: rgba(14, 29, 19, 0.78);
+  /* =========================================================
+     TEMAS DO MULTIVERSO OMNITRIX
+     1. Ben Prime (Verde Galvânico Clássico / Omniverse)
+     2. Albedo (Vermelho Ultimatrix / Negativo)
+     3. Gwen 10 (Azul Ciano & Rosa Magenta)
+     4. Ben 23 (Azul Elétrico & Dourado)
+     ========================================================= */
+  :root,
+  body[data-core-mode="ben_prime"] {
+    --bg-void: #020904;
+    --bg-radial-1: rgba(0, 255, 65, 0.16);
+    --bg-radial-2: rgba(0, 229, 163, 0.12);
+    --bg-panel: rgba(6, 17, 10, 0.78);
+    --bg-card: rgba(9, 25, 15, 0.80);
     --omnitrix-primary: #00ff41;
-    --omnitrix-secondary: #00e5ff;
-    --omnitrix-amber: #ffb000;
-    --omnitrix-dim: rgba(0, 255, 65, 0.22);
-    --omnitrix-border: rgba(0, 255, 65, 0.34);
-    --omnitrix-glow: rgba(0, 255, 65, 0.38);
-    --omnitrix-soft: rgba(0, 255, 65, 0.09);
+    --omnitrix-secondary: #00e5a3;
+    --omnitrix-dim: rgba(0, 255, 65, 0.30);
+    --omnitrix-border: rgba(0, 255, 65, 0.45);
+    --omnitrix-border-sec: rgba(0, 229, 163, 0.42);
+    --omnitrix-glow: rgba(0, 255, 65, 0.45);
+    --omnitrix-soft: rgba(0, 255, 65, 0.11);
+    --omnitrix-soft-sec: rgba(0, 229, 163, 0.10);
+    --ring-metal: #111c15;
+    --btn-text: #020a04;
+    --logo-filter: none;
     --text-white: #f8fafc;
     --text-body: #e2e8f0;
     --text-muted: #94a3b8;
@@ -30,30 +44,64 @@
     --font-mono: 'Share Tech Mono', 'Consolas', monospace;
   }
 
-  /* Modo Calibração (Azmuth Cyan) */
-  body[data-core-mode="calibration"] {
-    --omnitrix-primary: #00e5ff;
-    --omnitrix-secondary: #00ff88;
-    --omnitrix-dim: rgba(0, 229, 255, 0.22);
-    --omnitrix-border: rgba(0, 229, 255, 0.36);
-    --omnitrix-glow: rgba(0, 229, 255, 0.4);
-    --omnitrix-soft: rgba(0, 229, 255, 0.09);
-    --bg-void: #03080c;
-    --bg-panel: rgba(8, 19, 27, 0.92);
-    --bg-card: rgba(12, 27, 38, 0.78);
+  /* ALBEDO — Vermelho Ultimatrix & Rubi Negativo */
+  body[data-core-mode="albedo"] {
+    --bg-void: #090203;
+    --bg-radial-1: rgba(255, 30, 56, 0.18);
+    --bg-radial-2: rgba(255, 90, 54, 0.12);
+    --bg-panel: rgba(20, 6, 9, 0.78);
+    --bg-card: rgba(30, 9, 13, 0.82);
+    --omnitrix-primary: #ff1e38;
+    --omnitrix-secondary: #ff6b4a;
+    --omnitrix-dim: rgba(255, 30, 56, 0.32);
+    --omnitrix-border: rgba(255, 30, 56, 0.48);
+    --omnitrix-border-sec: rgba(255, 107, 74, 0.42);
+    --omnitrix-glow: rgba(255, 30, 56, 0.48);
+    --omnitrix-soft: rgba(255, 30, 56, 0.12);
+    --omnitrix-soft-sec: rgba(255, 107, 74, 0.10);
+    --ring-metal: #1f1013;
+    --btn-text: #ffffff;
+    --logo-filter: hue-rotate(230deg) saturate(1.6);
   }
 
-  /* Modo Recarga (Overcharge Amber/Orange) */
-  body[data-core-mode="recharge"] {
-    --omnitrix-primary: #ff5520;
-    --omnitrix-secondary: #ffaa00;
-    --omnitrix-dim: rgba(255, 85, 32, 0.24);
-    --omnitrix-border: rgba(255, 85, 32, 0.36);
-    --omnitrix-glow: rgba(255, 85, 32, 0.4);
-    --omnitrix-soft: rgba(255, 85, 32, 0.09);
-    --bg-void: #090403;
-    --bg-panel: rgba(22, 10, 8, 0.92);
-    --bg-card: rgba(32, 15, 11, 0.78);
+  /* GWEN 10 — Rosa Magenta & Azul Ciano */
+  body[data-core-mode="gwen_10"] {
+    --bg-void: #040714;
+    --bg-radial-1: rgba(255, 46, 147, 0.18);
+    --bg-radial-2: rgba(0, 229, 255, 0.16);
+    --bg-panel: rgba(9, 14, 30, 0.78);
+    --bg-card: rgba(14, 21, 44, 0.82);
+    --omnitrix-primary: #ff2e93;
+    --omnitrix-secondary: #00e5ff;
+    --omnitrix-dim: rgba(0, 229, 255, 0.34);
+    --omnitrix-border: rgba(255, 46, 147, 0.48);
+    --omnitrix-border-sec: rgba(0, 229, 255, 0.48);
+    --omnitrix-glow: rgba(255, 46, 147, 0.46);
+    --omnitrix-soft: rgba(255, 46, 147, 0.12);
+    --omnitrix-soft-sec: rgba(0, 229, 255, 0.12);
+    --ring-metal: #0f1b2e;
+    --btn-text: #ffffff;
+    --logo-filter: hue-rotate(185deg) saturate(1.5);
+  }
+
+  /* BEN 23 — Azul Elétrico & Dourado */
+  body[data-core-mode="ben_23"] {
+    --bg-void: #020816;
+    --bg-radial-1: rgba(0, 168, 255, 0.20);
+    --bg-radial-2: rgba(255, 208, 0, 0.15);
+    --bg-panel: rgba(6, 16, 34, 0.78);
+    --bg-card: rgba(10, 24, 48, 0.82);
+    --omnitrix-primary: #ffd000;
+    --omnitrix-secondary: #00a8ff;
+    --omnitrix-dim: rgba(0, 168, 255, 0.36);
+    --omnitrix-border: rgba(255, 208, 0, 0.48);
+    --omnitrix-border-sec: rgba(0, 168, 255, 0.50);
+    --omnitrix-glow: rgba(0, 168, 255, 0.50);
+    --omnitrix-soft: rgba(255, 208, 0, 0.12);
+    --omnitrix-soft-sec: rgba(0, 168, 255, 0.14);
+    --ring-metal: #0a192f;
+    --btn-text: #040914;
+    --logo-filter: hue-rotate(65deg) saturate(1.5);
   }
 
   * {
@@ -69,6 +117,11 @@
   body {
     font-family: var(--font-sans);
     background-color: var(--bg-void);
+    background-image:
+      radial-gradient(circle at 68% 38%, var(--bg-radial-1) 0%, transparent 55%),
+      radial-gradient(circle at 20% 75%, var(--bg-radial-2) 0%, transparent 55%),
+      linear-gradient(135deg, rgba(255, 255, 255, 0.015) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.015) 50%, rgba(255, 255, 255, 0.015) 75%, transparent 75%, transparent);
+    background-size: 100% 100%, 100% 100%, 48px 48px;
     color: var(--text-body);
     min-height: 100vh;
     overflow-x: hidden;
@@ -79,7 +132,7 @@
     -webkit-font-smoothing: antialiased;
   }
 
-  /* Canvas de Circuitos Ultra-T suave ao fundo (sem atrapalhar leitura) */
+  /* Canvas de Tecnologia Galvaniana (Omniverse / Ben 10 Games HUD) */
   #mechamorphCanvas {
     position: fixed;
     inset: 0;
@@ -87,12 +140,12 @@
     height: 100%;
     z-index: 0;
     pointer-events: none;
-    opacity: 0.55;
+    opacity: 0.96;
   }
 
   ::selection {
     background: var(--omnitrix-primary);
-    color: #000;
+    color: var(--btn-text);
   }
 
   .ico {
@@ -107,7 +160,7 @@
   }
 
   /* =========================================================
-     NAVBAR // NAVEGAÇÃO CLARA E DIRETA PARA RECRUTADORES
+     NAVBAR // BARRA DE COMANDO GALVANIANA
      ========================================================= */
   nav {
     position: sticky;
@@ -118,11 +171,25 @@
     align-items: center;
     gap: 14px;
     padding: 12px 28px;
-    background: rgba(4, 11, 7, 0.95);
+    background: rgba(3, 8, 12, 0.90);
     border-bottom: 2px solid var(--omnitrix-primary);
-    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.8), 0 0 18px var(--omnitrix-glow);
+    box-shadow: 0 4px 28px rgba(0, 0, 0, 0.85), 0 2px 22px var(--omnitrix-glow);
     backdrop-filter: blur(12px);
     flex-wrap: wrap;
+  }
+
+  /* Detalhe central estilo Omniverse na barra superior */
+  nav::after {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 180px;
+    height: 6px;
+    background: linear-gradient(90deg, var(--omnitrix-secondary), var(--omnitrix-primary), var(--omnitrix-secondary));
+    clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%);
+    box-shadow: 0 0 14px var(--omnitrix-primary);
   }
 
   .nav-brand {
@@ -150,9 +217,9 @@
     position: absolute;
     inset: -3px;
     border-radius: 50%;
-    border: 1px dashed var(--omnitrix-primary);
+    border: 1.5px dashed var(--omnitrix-primary);
     animation: spinSlow 16s linear infinite;
-    opacity: 0.7;
+    opacity: 0.8;
   }
 
   @keyframes spinSlow {
@@ -166,7 +233,8 @@
     object-fit: cover;
     border: 2px solid var(--omnitrix-primary);
     box-shadow: 0 0 12px var(--omnitrix-glow);
-    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    filter: var(--logo-filter);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), filter 0.3s ease;
   }
 
   .nav-brand:hover .nav-logo {
@@ -204,7 +272,7 @@
 
   .nav-btn {
     font-family: var(--font-sans);
-    background: rgba(255, 255, 255, 0.03);
+    background: rgba(255, 255, 255, 0.04);
     color: var(--text-body);
     border: 1px solid var(--omnitrix-dim);
     padding: 9px 16px;
@@ -212,7 +280,7 @@
     font-weight: 600;
     cursor: pointer;
     transition: all 0.2s ease;
-    border-radius: 6px;
+    clip-path: polygon(8px 0, 100% 0, calc(100% - 8px) 100%, 0 100%);
     display: inline-flex;
     align-items: center;
     gap: 7px;
@@ -229,18 +297,19 @@
     border-color: var(--omnitrix-primary);
     color: var(--text-white);
     background: var(--omnitrix-soft);
+    box-shadow: 0 0 12px var(--omnitrix-glow);
   }
 
   .nav-btn.active {
     background: var(--omnitrix-primary);
-    color: #020804;
+    color: var(--btn-text);
     border-color: var(--omnitrix-primary);
-    box-shadow: 0 0 16px var(--omnitrix-glow);
+    box-shadow: 0 0 18px var(--omnitrix-glow);
     font-weight: 700;
   }
 
   .nav-btn.active .tab-idx {
-    color: #020804;
+    color: var(--btn-text);
   }
 
   .nav-tools {
@@ -251,9 +320,9 @@
   }
 
   .hud-tool-btn {
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid var(--omnitrix-dim);
-    color: var(--text-body);
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--omnitrix-border);
+    color: var(--text-white);
     font-family: var(--font-mono);
     font-size: 11.5px;
     padding: 8px 12px;
@@ -262,7 +331,7 @@
     transition: all 0.2s ease;
     display: inline-flex;
     align-items: center;
-    gap: 6px;
+    gap: 7px;
   }
 
   .hud-tool-btn:hover,
@@ -270,14 +339,16 @@
     border-color: var(--omnitrix-primary);
     color: var(--omnitrix-primary);
     background: var(--omnitrix-soft);
+    box-shadow: 0 0 12px var(--omnitrix-glow);
   }
 
-  .mode-dot {
-    width: 8px;
-    height: 8px;
+  .mode-dual-dot {
+    width: 12px;
+    height: 12px;
     border-radius: 50%;
-    background: var(--omnitrix-primary);
+    background: linear-gradient(135deg, var(--omnitrix-primary) 50%, var(--omnitrix-secondary) 50%);
     box-shadow: 0 0 8px var(--omnitrix-primary);
+    flex-shrink: 0;
   }
 
   /* =========================================================
@@ -301,7 +372,7 @@
   }
 
   /* =========================================================
-     COLUNA ESQUERDA: CARD DO CANDIDATO + DIAL DO OMNITRIX
+     COLUNA ESQUERDA: CARD GALVANIANO DO CANDIDATO + DIAL 3D
      ========================================================= */
   .host-sidebar {
     position: sticky;
@@ -309,13 +380,16 @@
     background: var(--bg-panel);
     border: 1px solid var(--omnitrix-border);
     border-top: 4px solid var(--omnitrix-primary);
-    border-radius: 10px;
     padding: 22px 20px;
-    box-shadow: 0 14px 36px rgba(0, 0, 0, 0.75);
+    box-shadow:
+      0 14px 36px rgba(0, 0, 0, 0.8),
+      inset 0 0 24px var(--omnitrix-soft);
+    clip-path: polygon(0 0, calc(100% - 18px) 0, 100% 18px, 100% 100%, 18px 100%, 0 calc(100% - 18px));
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 14px;
+    backdrop-filter: blur(10px);
   }
 
   .sidebar-top-status {
@@ -327,7 +401,7 @@
     font-size: 12px;
     color: var(--text-muted);
     padding-bottom: 10px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid var(--omnitrix-dim);
   }
 
   .pulse-dot {
@@ -349,8 +423,8 @@
   /* DIAL OMNITRIX 3D */
   .portrait-stage {
     position: relative;
-    width: 196px;
-    height: 196px;
+    width: 204px;
+    height: 204px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -362,21 +436,21 @@
     width: 100%;
     height: 100%;
     pointer-events: none;
-    animation: spinSlow 28s linear infinite;
+    animation: spinSlow 26s linear infinite;
   }
 
   .portrait-container {
     position: relative;
-    width: 172px;
-    height: 172px;
+    width: 174px;
+    height: 174px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: radial-gradient(circle, var(--omnitrix-primary) 0%, #021a08 75%);
+    background: radial-gradient(circle, var(--omnitrix-primary) 0%, var(--bg-void) 78%);
     box-shadow:
-      0 0 26px var(--omnitrix-glow),
-      inset 0 0 16px var(--omnitrix-primary);
+      0 0 28px var(--omnitrix-glow),
+      inset 0 0 18px var(--omnitrix-primary);
     cursor: pointer;
     user-select: none;
   }
@@ -387,13 +461,13 @@
 
   @keyframes dialBurst {
     0% { box-shadow: 0 0 26px var(--omnitrix-glow), 0 0 0 0 var(--omnitrix-primary); }
-    50% { box-shadow: 0 0 50px var(--omnitrix-primary), 0 0 0 16px rgba(0, 255, 65, 0); }
-    100% { box-shadow: 0 0 26px var(--omnitrix-glow), 0 0 0 0 rgba(0, 255, 65, 0); }
+    50% { box-shadow: 0 0 54px var(--omnitrix-primary), 0 0 0 18px transparent; }
+    100% { box-shadow: 0 0 26px var(--omnitrix-glow), 0 0 0 0 transparent; }
   }
 
   .foto {
-    width: 138px;
-    height: 138px;
+    width: 140px;
+    height: 140px;
     border-radius: 50%;
     object-fit: cover;
     z-index: 10;
@@ -402,8 +476,8 @@
 
   .omnitrix-shutter {
     position: absolute;
-    width: 140px;
-    height: 140px;
+    width: 142px;
+    height: 142px;
     border-radius: 50%;
     z-index: 15;
     pointer-events: none;
@@ -411,7 +485,7 @@
     transform: scale(0.85);
     transition: opacity 0.16s ease, transform 0.2s ease;
     background:
-      radial-gradient(circle, rgba(0, 255, 65, 0.95) 0%, rgba(0, 180, 45, 0.9) 60%, #011106 100%);
+      radial-gradient(circle, var(--omnitrix-primary) 0%, var(--bg-void) 90%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -432,11 +506,11 @@
     position: absolute;
     inset: 0;
     border-radius: 50%;
-    border: 15px solid #1a211d;
+    border: 15px solid var(--ring-metal);
     box-shadow:
-      inset 0 0 0 3px var(--omnitrix-primary),
-      inset 0 0 14px var(--omnitrix-glow),
-      0 0 0 2px #050806,
+      inset 0 0 0 3px var(--omnitrix-secondary),
+      inset 0 0 16px var(--omnitrix-glow),
+      0 0 0 2.5px var(--omnitrix-primary),
       0 8px 20px rgba(0, 0, 0, 0.85);
     z-index: 20;
     pointer-events: none;
@@ -449,9 +523,17 @@
     height: 19px;
     background: var(--omnitrix-primary);
     border-radius: 50%;
-    border: 3.5px solid #101612;
+    border: 3.5px solid var(--ring-metal);
     box-shadow:
-      0 0 10px var(--omnitrix-primary),
+      0 0 12px var(--omnitrix-primary),
+      inset 0 0 4px #ffffff;
+  }
+
+  .omnitrix-ring .dot.left,
+  .omnitrix-ring .dot.right {
+    background: var(--omnitrix-secondary);
+    box-shadow:
+      0 0 12px var(--omnitrix-secondary),
       inset 0 0 4px #ffffff;
   }
 
@@ -469,8 +551,8 @@
 
   .dial-step-btn {
     background: rgba(255, 255, 255, 0.04);
-    border: 1px solid var(--omnitrix-border);
-    color: var(--omnitrix-primary);
+    border: 1px solid var(--omnitrix-border-sec);
+    color: var(--omnitrix-secondary);
     width: 30px;
     height: 28px;
     border-radius: 5px;
@@ -482,7 +564,7 @@
 
   .dial-step-btn:hover {
     background: var(--omnitrix-primary);
-    color: #000;
+    color: var(--btn-text);
   }
 
   .dna-mode-readout {
@@ -490,7 +572,7 @@
     font-family: var(--font-mono);
     font-size: 11.5px;
     padding: 5px 8px;
-    background: rgba(0, 0, 0, 0.45);
+    background: rgba(0, 0, 0, 0.5);
     border: 1px solid var(--omnitrix-dim);
     border-radius: 5px;
     color: var(--omnitrix-primary);
@@ -520,8 +602,8 @@
 
   .sidebar-info-list {
     width: 100%;
-    background: rgba(0, 0, 0, 0.35);
-    border: 1px solid rgba(255, 255, 255, 0.07);
+    background: rgba(0, 0, 0, 0.45);
+    border: 1px solid var(--omnitrix-border-sec);
     border-radius: 8px;
     padding: 12px 14px;
     display: flex;
@@ -561,21 +643,21 @@
     align-items: center;
     justify-content: center;
     gap: 8px;
-    background: var(--omnitrix-primary);
-    color: #020804;
+    background: linear-gradient(90deg, var(--omnitrix-primary) 0%, var(--omnitrix-secondary) 100%);
+    color: var(--btn-text);
     padding: 12px 16px;
-    border-radius: 7px;
     text-decoration: none;
     font-weight: 700;
     font-size: 13.5px;
     transition: all 0.2s ease;
-    box-shadow: 0 0 16px var(--omnitrix-glow);
+    box-shadow: 0 0 18px var(--omnitrix-glow);
+    clip-path: polygon(8px 0, 100% 0, calc(100% - 8px) 100%, 0 100%);
   }
 
   .btn-primary-cv:hover {
     background: #ffffff;
     color: #000000;
-    box-shadow: 0 0 22px rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 24px rgba(255, 255, 255, 0.85);
     transform: translateY(-1px);
   }
 
@@ -593,8 +675,8 @@
     gap: 6px;
     padding: 9px 12px;
     border-radius: 6px;
-    border: 1px solid var(--omnitrix-border);
-    background: var(--omnitrix-soft);
+    border: 1px solid var(--omnitrix-border-sec);
+    background: var(--omnitrix-soft-sec);
     color: var(--text-white);
     font-size: 12.5px;
     font-weight: 600;
@@ -603,12 +685,12 @@
   }
 
   .btn-quick-link:hover {
-    background: var(--omnitrix-primary);
-    color: #020804;
+    background: var(--omnitrix-secondary);
+    color: var(--btn-text);
   }
 
   /* =========================================================
-     COLUNA DIREITA: ÁREA DE LEITURA CLARA PARA RECRUTADORES
+     COLUNA DIREITA: SEÇÕES DE LEITURA FÁCIL COM MOLDURA GALVANIANA
      ========================================================= */
   .module-viewport {
     min-width: 0;
@@ -617,26 +699,28 @@
     gap: 20px;
   }
 
-  /* Banner da Seção Ativa */
   .screen-banner {
+    position: relative;
     background:
-      linear-gradient(90deg, rgba(0, 255, 65, 0.12) 0%, var(--bg-panel) 70%);
+      linear-gradient(90deg, var(--omnitrix-soft) 0%, var(--omnitrix-soft-sec) 50%, var(--bg-panel) 95%);
     border: 1px solid var(--omnitrix-border);
     border-left: 4px solid var(--omnitrix-primary);
-    border-radius: 10px;
+    border-right: 4px solid var(--omnitrix-secondary);
     padding: 18px 24px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 16px;
     flex-wrap: wrap;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.65);
+    clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 14px, 100% 100%, 0 100%);
+    backdrop-filter: blur(8px);
   }
 
   .screen-banner-kicker {
     font-family: var(--font-mono);
     font-size: 12px;
-    color: var(--omnitrix-primary);
+    color: var(--omnitrix-secondary);
     letter-spacing: 1.2px;
     text-transform: uppercase;
     margin-bottom: 4px;
@@ -656,7 +740,28 @@
     margin-top: 3px;
   }
 
-  /* ABAS: APENAS A ABA SELECIONADA APARECE (OU TODAS NO MODO LEITURA COMPLETA) */
+  .universe-badge {
+    font-family: var(--font-mono);
+    font-size: 11.5px;
+    padding: 7px 13px;
+    background: rgba(0, 0, 0, 0.65);
+    border: 1px solid var(--omnitrix-secondary);
+    color: var(--omnitrix-primary);
+    border-radius: 6px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 0 12px var(--omnitrix-soft-sec);
+  }
+
+  .universe-badge:hover {
+    background: var(--omnitrix-soft);
+    box-shadow: 0 0 14px var(--omnitrix-glow);
+  }
+
+  /* ABAS */
   .tab-pane {
     display: none;
   }
@@ -691,7 +796,7 @@
   }
 
   /* =========================================================
-     PAINÉIS E CARDS DE ALTA LEGIBILIDADE
+     PAINÉIS GALVANIANOS DE ALTA LEGIBILIDADE
      ========================================================= */
   .panel-grid {
     display: grid;
@@ -704,12 +809,27 @@
   }
 
   .panel {
+    position: relative;
     background: var(--bg-panel);
-    border: 1px solid var(--omnitrix-border);
+    border: 1px solid var(--omnitrix-border-sec);
     border-top: 3px solid var(--omnitrix-primary);
-    border-radius: 10px;
     padding: 24px;
-    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.55);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(8px);
+    clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 14px, 100% 100%, 14px 100%, 0 calc(100% - 14px));
+  }
+
+  /* Cantoneira tecnológica Galvaniana no canto inferior direito */
+  .panel::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 22px;
+    height: 22px;
+    border-bottom: 2.5px solid var(--omnitrix-secondary);
+    border-right: 2.5px solid var(--omnitrix-secondary);
+    pointer-events: none;
   }
 
   .panel-header {
@@ -719,7 +839,7 @@
     gap: 12px;
     margin-bottom: 18px;
     padding-bottom: 12px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid var(--omnitrix-dim);
   }
 
   .section-kicker {
@@ -742,11 +862,11 @@
   .panel-tag {
     font-family: var(--font-mono);
     font-size: 11.5px;
-    color: var(--omnitrix-primary);
+    color: var(--omnitrix-secondary);
     padding: 4px 10px;
     border-radius: 5px;
-    border: 1px solid var(--omnitrix-dim);
-    background: var(--omnitrix-soft);
+    border: 1px solid var(--omnitrix-border-sec);
+    background: var(--omnitrix-soft-sec);
     white-space: nowrap;
   }
 
@@ -763,8 +883,13 @@
     background: var(--bg-panel);
     border: 1px solid var(--omnitrix-dim);
     border-top: 3px solid var(--omnitrix-primary);
-    border-radius: 8px;
     padding: 14px 16px;
+    clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 0 100%);
+    backdrop-filter: blur(8px);
+  }
+
+  .highlight-box:nth-child(even) {
+    border-top-color: var(--omnitrix-secondary);
   }
 
   .highlight-box span {
@@ -792,7 +917,7 @@
   .summary-prose strong {
     color: var(--text-white);
     font-weight: 600;
-    border-bottom: 1px solid var(--omnitrix-primary);
+    border-bottom: 1.5px solid var(--omnitrix-secondary);
   }
 
   .trait-list {
@@ -807,10 +932,14 @@
     gap: 14px;
     padding: 12px 14px;
     background: var(--bg-card);
-    border: 1px solid rgba(255, 255, 255, 0.07);
-    border-left: 3px solid var(--omnitrix-primary);
-    border-radius: 7px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-left: 3.5px solid var(--omnitrix-primary);
+    border-radius: 6px;
     transition: border-color 0.2s ease, transform 0.2s ease;
+  }
+
+  .trait-card:nth-child(even) {
+    border-left-color: var(--omnitrix-secondary);
   }
 
   .trait-card:hover {
@@ -882,8 +1011,8 @@
 
   .timeline-meta {
     font-size: 13.5px;
-    font-weight: 500;
-    color: var(--omnitrix-primary);
+    font-weight: 600;
+    color: var(--omnitrix-secondary);
     margin-bottom: 14px;
   }
 
@@ -924,7 +1053,7 @@
     font-weight: 500;
     padding: 4px 10px;
     border-radius: 5px;
-    background: rgba(0, 255, 65, 0.07);
+    background: var(--omnitrix-soft);
     border: 1px solid var(--omnitrix-dim);
     color: var(--text-white);
   }
@@ -975,7 +1104,7 @@
     border-radius: 5px;
     border: 1px solid var(--omnitrix-dim);
     color: var(--text-white);
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.45);
     white-space: nowrap;
   }
 
@@ -1010,7 +1139,7 @@
     font-family: var(--font-mono);
     font-size: 11px;
     background: var(--omnitrix-primary);
-    color: #020804;
+    color: var(--btn-text);
     padding: 2px 7px;
     border-radius: 4px;
   }
@@ -1036,7 +1165,7 @@
 
   .skill-chip small {
     font-size: 11.5px;
-    color: var(--omnitrix-primary);
+    color: var(--omnitrix-secondary);
     font-weight: 600;
   }
 
@@ -1080,7 +1209,7 @@
     display: block;
     height: 100%;
     width: 68%;
-    background: var(--omnitrix-primary);
+    background: linear-gradient(90deg, var(--omnitrix-secondary), var(--omnitrix-primary));
     box-shadow: 0 0 10px var(--omnitrix-primary);
   }
 
@@ -1191,7 +1320,7 @@
 
   .comm-btn:hover {
     background: var(--omnitrix-primary);
-    color: #020804;
+    color: var(--btn-text);
   }
 
   .comm-btn.secondary {
@@ -1212,7 +1341,7 @@
     align-items: center;
     padding: 14px 20px;
     background: var(--bg-panel);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    border: 1px solid var(--omnitrix-dim);
     border-radius: 8px;
     font-size: 13.5px;
     color: var(--text-muted);
@@ -1232,7 +1361,7 @@
 
   .module-next-btn:hover {
     background: var(--omnitrix-primary);
-    color: #020804;
+    color: var(--btn-text);
   }
 
   /* Toast HUD */
@@ -1241,7 +1370,7 @@
     bottom: 24px;
     right: 24px;
     z-index: 1000;
-    background: rgba(6, 20, 10, 0.96);
+    background: rgba(5, 12, 10, 0.96);
     border: 1px solid var(--omnitrix-primary);
     border-left: 4px solid var(--omnitrix-primary);
     border-radius: 6px;
@@ -1249,7 +1378,7 @@
     padding: 12px 18px;
     font-size: 13.5px;
     font-weight: 500;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8), 0 0 16px var(--omnitrix-glow);
     opacity: 0;
     transform: translateY(16px);
     pointer-events: none;
@@ -1268,8 +1397,8 @@
     padding: 20px;
     color: var(--text-muted);
     font-size: 12.5px;
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
-    background: rgba(4, 10, 6, 0.92);
+    border-top: 1px solid var(--omnitrix-dim);
+    background: rgba(3, 8, 6, 0.92);
   }
 
   footer strong {
@@ -1308,9 +1437,32 @@
   }
 </style>
 </head>
-<body data-core-mode="active">
+<body data-core-mode="ben_prime">
+<script>
+  (function() {
+    var modes = ['ben_prime', 'albedo', 'gwen_10', 'ben_23'];
+    var params = new URLSearchParams(window.location.search);
+    var forced = params.get('theme');
+    var idx = modes.indexOf(forced);
+    if (idx === -1) {
+      idx = Math.floor(Math.random() * modes.length);
+      try {
+        var last = localStorage.getItem('omnitrix_last_theme_idx');
+        if (last !== null) {
+          var lastIdx = parseInt(last, 10);
+          if (!isNaN(lastIdx)) {
+            var others = [0, 1, 2, 3].filter(function(i) { return i !== lastIdx; });
+            idx = others[Math.floor(Math.random() * others.length)];
+          }
+        }
+      } catch (e) {}
+    }
+    window.__INITIAL_CORE_IDX__ = idx;
+    document.body.setAttribute('data-core-mode', modes[idx]);
+  })();
+</script>
 
-<!-- Fundo de Circuitos Ultra-T -->
+<!-- Canvas de Tecnologia Galvaniana (Estilo Ben 10 Omniverse / Jogos) -->
 <canvas id="mechamorphCanvas" aria-hidden="true"></canvas>
 
 <nav aria-label="Navegação Principal">
@@ -1340,12 +1492,12 @@
   </div>
 
   <div class="nav-tools">
-    <button type="button" id="recruiterViewBtn" class="hud-tool-btn" onclick="toggleRecruiterView()" title="Exibir todas as seções na mesma página para leitura corrida">
+    <button type="button" id="recruiterViewBtn" class="hud-tool-btn" onclick="toggleRecruiterView()" title="Exibir todas as seções na mesma página para leitura rápida">
       <svg class="ico" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
       <span id="recruiterViewLabel">Ver Currículo Inteiro</span>
     </button>
-    <button type="button" id="coreModeBtn" class="hud-tool-btn" onclick="cycleCoreMode()" title="Alternar cor da interface Omnitrix">
-      <span class="mode-dot"></span> <span id="coreModeLabel">Tema: Verde</span>
+    <button type="button" id="coreModeBtn" class="hud-tool-btn" onclick="cycleCoreMode()" title="Alternar dimensão/cor do Omnitrix (Muda automaticamente a cada acesso!)">
+      <span class="mode-dual-dot"></span> <span id="coreModeLabel">Omnitrix: Ben Prime</span>
     </button>
     <button type="button" id="sfxToggle" class="hud-tool-btn active" onclick="toggleSfx()" title="Ativar/Desativar efeito sonoro do Omnitrix">
       Som: ON
@@ -1367,10 +1519,10 @@
 
       <div class="portrait-stage">
         <svg class="outer-cyber-ring" viewBox="0 0 260 260" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="130" cy="130" r="124" stroke="currentColor" stroke-opacity="0.24" stroke-width="1.5" stroke-dasharray="10 6" style="color: var(--omnitrix-primary);" />
-          <circle cx="130" cy="130" r="117" stroke="currentColor" stroke-opacity="0.35" stroke-width="1" stroke-dasharray="2 12" style="color: var(--omnitrix-secondary);" />
-          <path d="M130 2 A128 128 0 0 1 258 130" stroke="currentColor" stroke-opacity="0.5" stroke-width="2" style="color: var(--omnitrix-primary);" />
-          <path d="M130 258 A128 128 0 0 1 2 130" stroke="currentColor" stroke-opacity="0.5" stroke-width="2" style="color: var(--omnitrix-primary);" />
+          <circle cx="130" cy="130" r="124" stroke="currentColor" stroke-opacity="0.3" stroke-width="1.5" stroke-dasharray="10 6" style="color: var(--omnitrix-primary);" />
+          <circle cx="130" cy="130" r="116" stroke="currentColor" stroke-opacity="0.45" stroke-width="1.2" stroke-dasharray="3 10" style="color: var(--omnitrix-secondary);" />
+          <path d="M130 2 A128 128 0 0 1 258 130" stroke="currentColor" stroke-opacity="0.65" stroke-width="2.2" style="color: var(--omnitrix-primary);" />
+          <path d="M130 258 A128 128 0 0 1 2 130" stroke="currentColor" stroke-opacity="0.65" stroke-width="2.2" style="color: var(--omnitrix-secondary);" />
         </svg>
 
         <div class="portrait-container" id="portraitContainer" onclick="cycleNextTab()" title="Clique para girar o Omnitrix e alternar a aba">
@@ -1380,8 +1532,8 @@
             <svg viewBox="0 0 100 100" preserveAspectRatio="none">
               <polygon points="0,0 32,50 0,100" fill="#050b07"/>
               <polygon points="100,0 68,50 100,100" fill="#050b07"/>
-              <polygon points="0,0 32,50 0,100" stroke="#00ff41" stroke-width="2" fill="none"/>
-              <polygon points="100,0 68,50 100,100" stroke="#00ff41" stroke-width="2" fill="none"/>
+              <polygon points="0,0 32,50 0,100" stroke="currentColor" stroke-width="2.5" fill="none" style="color: var(--omnitrix-primary);"/>
+              <polygon points="100,0 68,50 100,100" stroke="currentColor" stroke-width="2.5" fill="none" style="color: var(--omnitrix-primary);"/>
             </svg>
           </div>
 
@@ -1453,6 +1605,10 @@
           <h2 class="screen-banner-title" id="bannerTitle">Resumo Profissional &amp; Perfil</h2>
           <p class="screen-banner-desc" id="bannerDesc">Visão geral da minha experiência prática em banco de dados, sistemas em produção e objetivo no backend.</p>
         </div>
+        <button type="button" class="universe-badge" onclick="cycleCoreMode()" title="Clique para alternar entre Ben Prime, Albedo, Gwen 10 e Ben 23">
+          <span class="mode-dual-dot"></span>
+          <span id="bannerUniverseTag">GALVAN TECH // BEN PRIME</span>
+        </button>
       </div>
 
       <!-- =====================================================
@@ -1923,7 +2079,7 @@
 </div>
 
 <footer>
-  <p>Desenvolvido por <strong>Miqueias Carvalho</strong> · Goiânia, GO · Tema Omnitrix / Ultra-T</p>
+  <p>Desenvolvido por <strong>Miqueias Carvalho</strong> · Goiânia, GO · Interface Galvaniana (Ben 10 Omniverse)</p>
 </footer>
 
 <script>
@@ -1971,6 +2127,64 @@
   const transformSound = new Audio(audioData);
   transformSound.volume = 0.4;
 
+  // =========================================================
+  // TEMAS DO MULTIVERSO OMNITRIX (SORTEADO A CADA ACESSO!)
+  // =========================================================
+  const coreModes = [
+    {
+      id: 'ben_prime',
+      label: 'Omnitrix: Ben Prime',
+      badge: 'GALVAN TECH // BEN PRIME (VERDE)',
+      toast: 'Dimensão Ben Prime (Verde Galvânico) ativada!'
+    },
+    {
+      id: 'albedo',
+      label: 'Omnitrix: Albedo',
+      badge: 'GALVAN TECH // ALBEDO (VERMELHO)',
+      toast: 'Dimensão Albedo (Vermelho Negativo) ativada!'
+    },
+    {
+      id: 'gwen_10',
+      label: 'Omnitrix: Gwen 10',
+      badge: 'GALVAN TECH // GWEN 10 (AZUL & ROSA)',
+      toast: 'Dimensão Gwen 10 (Azul & Rosa) ativada!'
+    },
+    {
+      id: 'ben_23',
+      label: 'Omnitrix: Ben 23',
+      badge: 'GALVAN TECH // BEN 23 (AZUL & DOURADO)',
+      toast: 'Dimensão Ben 23 (Azul & Dourado) ativada!'
+    }
+  ];
+
+  let currentCoreIndex = 0;
+
+  function applyCoreMode(index, announce = false) {
+    currentCoreIndex = index;
+    const mode = coreModes[currentCoreIndex];
+    document.body.setAttribute('data-core-mode', mode.id);
+    const lbl = document.getElementById('coreModeLabel');
+    const bTag = document.getElementById('bannerUniverseTag');
+    if (lbl) lbl.textContent = mode.label;
+    if (bTag) bTag.textContent = mode.badge;
+    try {
+      localStorage.setItem('omnitrix_last_theme_idx', String(currentCoreIndex));
+    } catch (e) {}
+    if (announce) showToast(mode.toast);
+  }
+
+  // Sincroniza rótulos com o tema sorteado na abertura da página
+  (function initRandomMultiverseTheme() {
+    const idx = typeof window.__INITIAL_CORE_IDX__ === 'number' ? window.__INITIAL_CORE_IDX__ : 0;
+    applyCoreMode(idx, false);
+  })();
+
+  function cycleCoreMode() {
+    playSfx();
+    const nextIdx = (currentCoreIndex + 1) % coreModes.length;
+    applyCoreMode(nextIdx, true);
+  }
+
   function playSfx() {
     if (!sfxEnabled) return;
     transformSound.currentTime = 0;
@@ -2016,27 +2230,9 @@
     }
   }
 
-  const coreModes = [
-    { id: 'active',      label: 'Tema: Verde',   toast: 'Tema Omnitrix Verde ativado' },
-    { id: 'calibration', label: 'Tema: Ciano',   toast: 'Tema Calibração (Ciano) ativado' },
-    { id: 'recharge',    label: 'Tema: Laranja', toast: 'Tema Sobrecarga (Laranja) ativado' }
-  ];
-  let currentCoreIndex = 0;
-
-  function cycleCoreMode() {
-    playSfx();
-    currentCoreIndex = (currentCoreIndex + 1) % coreModes.length;
-    const mode = coreModes[currentCoreIndex];
-    document.body.setAttribute('data-core-mode', mode.id);
-    const lbl = document.getElementById('coreModeLabel');
-    if (lbl) lbl.textContent = mode.label;
-    showToast(mode.toast);
-  }
-
   function switchTab(tabId, btnElement, direction = 1) {
     playSfx();
 
-    // Se estava no modo leitura completa e clicou numa aba específica, volta ao modo abas para trocar na hora
     if (recruiterAllOpen) {
       recruiterAllOpen = false;
       document.body.classList.remove('recruiter-all-open');
@@ -2072,13 +2268,11 @@
 
     if (foto && formImages[tabId]) {
       foto.style.opacity = '0.15';
-      foto.style.filter = 'brightness(2.5) sepia(1) hue-rotate(80deg) saturate(4)';
       foto.style.transform = 'scale(0.94)';
 
       setTimeout(() => {
         foto.src = formImages[tabId];
         foto.style.opacity = '1';
-        foto.style.filter = 'none';
         foto.style.transform = 'scale(1)';
       }, 170);
     }
@@ -2158,43 +2352,91 @@
   });
 
   // =========================================================
-  // CANVAS BACKGROUND: CIRCUITOS ULTRA-T (SUAVE E ELEGANTE)
+  // CANVAS DE TECNOLOGIA GALVANIANA (OMNIVERSE & BEN 10 GAMES)
+  // Combina:
+  // 1. Malha Hexagonal de Galvan Prime (células preenchidas e duplas)
+  // 2. Núcleos Holográficos de Anéis Concêntricos Rotativos + Ampulheta Omnitrix
+  // 3. Trilhas de Circuito Galvânico (45°/90°) com nós duplos (◎) e pulsos
   // =========================================================
-  (function initMechamorphCanvas() {
+  (function initGalvanTechCanvas() {
     const canvas = document.getElementById('mechamorphCanvas');
     if (!canvas) return;
     const ctx = canvas.getContext('2d');
     let width = 0, height = 0;
     let paths = [];
     let pulses = [];
+    let hexCells = [];
+    let angle = 0;
 
-    function getThemeColor() {
+    function getThemeColors() {
       const mode = document.body.getAttribute('data-core-mode');
-      if (mode === 'calibration') return { main: '#00e5ff', sec: '#00ff88' };
-      if (mode === 'recharge') return { main: '#ff5520', sec: '#ffaa00' };
-      return { main: '#00ff41', sec: '#00e5ff' };
+      if (mode === 'albedo') {
+        return { main: '#ff1e38', sec: '#ff6b4a' };
+      }
+      if (mode === 'gwen_10') {
+        return { main: '#ff2e93', sec: '#00e5ff' };
+      }
+      if (mode === 'ben_23') {
+        return { main: '#ffd000', sec: '#00a8ff' };
+      }
+      return { main: '#00ff41', sec: '#00e5a3' };
     }
 
-    function buildCircuitGrid() {
+    // Gerador pseudo-aleatório determinístico para padrão consistente e rico
+    let seed = 101010;
+    function rand() {
+      seed = (seed * 1664525 + 1013904223) % 4294967296;
+      return seed / 4294967296;
+    }
+
+    function buildGalvanScene() {
       width = canvas.width = window.innerWidth;
       height = canvas.height = window.innerHeight;
       paths = [];
       pulses = [];
+      hexCells = [];
+      seed = 421023;
 
-      const step = 80;
-      const cols = Math.ceil(width / step);
-      const rows = Math.ceil(height / step);
-      const count = Math.min(28, Math.max(14, Math.floor((width * height) / 55000)));
+      // 1. Células Hexagonais Galvanianas espalhadas pelo fundo
+      const hexRadius = 40;
+      const dx = hexRadius * Math.sqrt(3);
+      const dy = hexRadius * 1.5;
+      const cols = Math.ceil(width / dx) + 1;
+      const rows = Math.ceil(height / dy) + 1;
+
+      for (let r = 0; r < rows; r++) {
+        for (let c = 0; c < cols; c++) {
+          if (rand() < 0.36) {
+            const x = c * dx + (r % 2 === 1 ? dx / 2 : 0);
+            const y = r * dy;
+            hexCells.push({
+              x,
+              y,
+              r: hexRadius - 3,
+              phase: rand() * Math.PI * 2,
+              speed: 0.012 + rand() * 0.018,
+              useSec: rand() < 0.45,
+              filled: rand() < 0.24
+            });
+          }
+        }
+      }
+
+      // 2. Trilhas de Circuito Galvânico (45° e 90°) estilo placa-mãe de Galvan Prime
+      const step = 68;
+      const gCols = Math.ceil(width / step);
+      const gRows = Math.ceil(height / step);
+      const count = Math.min(44, Math.max(24, Math.floor((width * height) / 34000)));
 
       for (let i = 0; i < count; i++) {
-        let cx = Math.floor(Math.random() * cols) * step;
-        let cy = Math.floor(Math.random() * rows) * step;
+        let cx = Math.floor(rand() * gCols) * step;
+        let cy = Math.floor(rand() * gRows) * step;
         const pts = [{ x: cx, y: cy }];
-        const segments = 3 + Math.floor(Math.random() * 3);
+        const segments = 3 + Math.floor(rand() * 4);
 
         for (let s = 0; s < segments; s++) {
-          const dir = Math.floor(Math.random() * 6);
-          const len = (1 + Math.floor(Math.random() * 2)) * step;
+          const dir = Math.floor(rand() * 6);
+          const len = (1 + Math.floor(rand() * 2)) * step;
           if (dir === 0) cx += len;
           else if (dir === 1) cx -= len;
           else if (dir === 2) cy += len;
@@ -2203,29 +2445,140 @@
           else { cx -= len * 0.5; cy += len * 0.5; }
           pts.push({ x: cx, y: cy });
         }
-        paths.push(pts);
-        if (i % 2 === 0) {
-          pulses.push({
-            pathIdx: i,
-            segIdx: 0,
-            t: Math.random(),
-            speed: 0.007 + Math.random() * 0.01
-          });
-        }
+        paths.push({ pts, useSec: i % 2 === 1 });
+        pulses.push({
+          pathIdx: i,
+          segIdx: 0,
+          t: rand(),
+          speed: 0.008 + rand() * 0.012
+        });
       }
+    }
+
+    function drawHexagon(x, y, r, filled) {
+      ctx.beginPath();
+      for (let i = 0; i < 6; i++) {
+        const a = (Math.PI / 3) * i - Math.PI / 6;
+        const hx = x + r * Math.cos(a);
+        const hy = y + r * Math.sin(a);
+        if (i === 0) ctx.moveTo(hx, hy);
+        else ctx.lineTo(hx, hy);
+      }
+      ctx.closePath();
+      if (filled) ctx.fill();
+      ctx.stroke();
+    }
+
+    function drawOmniverseCore(cx, cy, baseR, colors, dirMult) {
+      ctx.save();
+      ctx.translate(cx, cy);
+
+      // Anel externo segmentado girando (Estilo Ben 10 Omniverse HUD)
+      ctx.save();
+      ctx.rotate(angle * 0.45 * dirMult);
+      ctx.strokeStyle = colors.sec;
+      ctx.globalAlpha = 0.28;
+      ctx.lineWidth = 2.5;
+      ctx.setLineDash([24, 14, 8, 14]);
+      ctx.beginPath();
+      ctx.arc(0, 0, baseR, 0, Math.PI * 2);
+      ctx.stroke();
+      ctx.restore();
+
+      // Segundo anel tecnológico girando no sentido oposto
+      ctx.save();
+      ctx.rotate(-angle * 0.7 * dirMult);
+      ctx.strokeStyle = colors.main;
+      ctx.globalAlpha = 0.30;
+      ctx.lineWidth = 2;
+      ctx.setLineDash([48, 22]);
+      ctx.beginPath();
+      ctx.arc(0, 0, baseR * 0.80, 0, Math.PI * 2);
+      ctx.stroke();
+
+      // Marcadores radiais estilo Omniverse
+      ctx.setLineDash([]);
+      for (let i = 0; i < 16; i++) {
+        const a = (Math.PI * 2 / 16) * i;
+        ctx.beginPath();
+        ctx.moveTo(Math.cos(a) * (baseR * 0.72), Math.sin(a) * (baseR * 0.72));
+        ctx.lineTo(Math.cos(a) * (baseR * 0.79), Math.sin(a) * (baseR * 0.79));
+        ctx.stroke();
+      }
+      ctx.restore();
+
+      // Símbolo da Ampulheta Galvânica (Omnitrix) no centro do núcleo
+      ctx.save();
+      ctx.rotate(Math.sin(angle * 0.5) * 0.08 * dirMult);
+      const rInner = baseR * 0.50;
+      ctx.strokeStyle = colors.sec;
+      ctx.globalAlpha = 0.22;
+      ctx.lineWidth = 2.2;
+      ctx.beginPath();
+      ctx.arc(0, 0, rInner, 0, Math.PI * 2);
+      ctx.stroke();
+
+      // Triângulos da ampulheta do Omnitrix com preenchimento translúcido
+      ctx.fillStyle = colors.main;
+      ctx.strokeStyle = colors.main;
+      ctx.globalAlpha = 0.07;
+      ctx.beginPath();
+      ctx.moveTo(-rInner * 0.68, -rInner * 0.72);
+      ctx.lineTo(rInner * 0.68, -rInner * 0.72);
+      ctx.lineTo(0, 0);
+      ctx.closePath();
+      ctx.fill();
+      ctx.globalAlpha = 0.25;
+      ctx.stroke();
+
+      ctx.globalAlpha = 0.07;
+      ctx.beginPath();
+      ctx.moveTo(-rInner * 0.68, rInner * 0.72);
+      ctx.lineTo(rInner * 0.68, rInner * 0.72);
+      ctx.lineTo(0, 0);
+      ctx.closePath();
+      ctx.fill();
+      ctx.globalAlpha = 0.25;
+      ctx.stroke();
+      ctx.restore();
+
+      ctx.restore();
     }
 
     function draw() {
       ctx.clearRect(0, 0, width, height);
-      const colors = getThemeColor();
+      const colors = getThemeColors();
+      angle += 0.004;
 
+      // 1. Desenha Malha Hexagonal Galvaniana pulsante
       ctx.lineWidth = 1.1;
-      ctx.strokeStyle = colors.main;
-      ctx.fillStyle = colors.main;
+      for (const cell of hexCells) {
+        cell.phase += cell.speed;
+        const wave = Math.sin(cell.phase) * 0.5 + 0.5;
+        const col = cell.useSec ? colors.sec : colors.main;
+        ctx.strokeStyle = col;
+        ctx.fillStyle = col;
+        if (cell.filled) {
+          ctx.globalAlpha = 0.03 + wave * 0.04;
+          drawHexagon(cell.x, cell.y, cell.r, true);
+        }
+        ctx.globalAlpha = 0.08 + wave * 0.14;
+        drawHexagon(cell.x, cell.y, cell.r, false);
+      }
 
+      // 2. Desenha Núcleos Holográficos Omniverse (Direita/Centro e Canto Inferior Esquerdo)
+      const minDim = Math.min(width, height);
+      drawOmniverseCore(width * 0.66, height * 0.50, minDim * 0.42, colors, 1);
+      drawOmniverseCore(width * 0.12, height * 0.86, minDim * 0.26, colors, -1);
+
+      // 3. Desenha Trilhas e Nós Duplos (◎) de Circuito Galvânico
+      ctx.lineWidth = 1.5;
       for (let i = 0; i < paths.length; i++) {
-        const pts = paths[i];
-        ctx.globalAlpha = 0.11;
+        const { pts, useSec } = paths[i];
+        const col = useSec ? colors.sec : colors.main;
+        ctx.strokeStyle = col;
+        ctx.fillStyle = col;
+        ctx.globalAlpha = 0.24;
         ctx.beginPath();
         ctx.moveTo(pts[0].x, pts[0].y);
         for (let j = 1; j < pts.length; j++) {
@@ -2233,26 +2586,33 @@
         }
         ctx.stroke();
 
-        ctx.globalAlpha = 0.2;
+        // Nós circulares duplos (◎) estilo Galvan Prime / Omniverse
         for (const p of [pts[0], pts[pts.length - 1]]) {
+          ctx.globalAlpha = 0.38;
           ctx.beginPath();
-          ctx.arc(p.x, p.y, 3, 0, Math.PI * 2);
+          ctx.arc(p.x, p.y, 4.5, 0, Math.PI * 2);
           ctx.stroke();
+          ctx.globalAlpha = 0.55;
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, 1.8, 0, Math.PI * 2);
+          ctx.fill();
         }
       }
 
+      // 4. Desenha Pulsos de Energia viajando nos circuitos
       for (const pulse of pulses) {
-        const pts = paths[pulse.pathIdx];
-        if (!pts || pts.length < 2) continue;
+        const pathObj = paths[pulse.pathIdx];
+        if (!pathObj || pathObj.pts.length < 2) continue;
+        const pts = pathObj.pts;
         const a = pts[pulse.segIdx];
         const b = pts[pulse.segIdx + 1];
         const x = a.x + (b.x - a.x) * pulse.t;
         const y = a.y + (b.y - a.y) * pulse.t;
 
-        ctx.globalAlpha = 0.55;
-        ctx.fillStyle = colors.sec;
+        ctx.globalAlpha = 0.85;
+        ctx.fillStyle = pathObj.useSec ? colors.main : colors.sec;
         ctx.beginPath();
-        ctx.arc(x, y, 2.2, 0, Math.PI * 2);
+        ctx.arc(x, y, 2.8, 0, Math.PI * 2);
         ctx.fill();
 
         pulse.t += pulse.speed;
@@ -2269,8 +2629,8 @@
       requestAnimationFrame(draw);
     }
 
-    window.addEventListener('resize', buildCircuitGrid);
-    buildCircuitGrid();
+    window.addEventListener('resize', buildGalvanScene);
+    buildGalvanScene();
     requestAnimationFrame(draw);
   })();
 </script>
