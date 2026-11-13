@@ -805,7 +805,7 @@
   }
 
   .panel-grid.missions-grid {
-    grid-template-columns: 1.35fr 0.85fr;
+    grid-template-columns: 1fr;
   }
 
   .panel {
@@ -1060,47 +1060,64 @@
 
   /* Repositórios GitHub */
   .repo-list {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
   }
 
   .repo-card {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 12px;
-    padding: 14px 16px;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 8px;
+    padding: 16px 18px;
     background: var(--bg-card);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    border-left: 3.5px solid var(--omnitrix-primary);
     border-radius: 8px;
     text-decoration: none;
     transition: all 0.2s ease;
   }
 
+  .repo-card:nth-child(even) {
+    border-left-color: var(--omnitrix-secondary);
+  }
+
   .repo-card:hover {
     border-color: var(--omnitrix-primary);
     background: var(--omnitrix-soft);
-    transform: translateX(3px);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
   }
 
-  .repo-card-info strong {
-    display: block;
+  .repo-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .repo-card-top strong {
     font-size: 15px;
-    font-weight: 600;
+    font-weight: 700;
     color: var(--omnitrix-primary);
-    margin-bottom: 2px;
   }
 
-  .repo-card-info span {
-    font-size: 13.5px;
+  .repo-card:nth-child(even) .repo-card-top strong {
+    color: var(--omnitrix-secondary);
+  }
+
+  .repo-card-desc {
+    font-size: 13.6px;
+    line-height: 1.55;
     color: var(--text-body);
   }
 
   .repo-badge {
     font-family: var(--font-mono);
-    font-size: 11.5px;
-    padding: 4px 9px;
+    font-size: 10.5px;
+    padding: 3px 8px;
     border-radius: 5px;
     border: 1px solid var(--omnitrix-dim);
     color: var(--text-white);
@@ -1417,6 +1434,7 @@
     }
     .panel-grid,
     .panel-grid.missions-grid,
+    .repo-list,
     .comm-grid {
       grid-template-columns: 1fr;
     }
@@ -1775,32 +1793,88 @@
                 <p class="section-kicker">Portfólio de Código</p>
                 <h2>Projetos no GitHub</h2>
               </div>
-              <span class="panel-tag">Repositórios</span>
+              <span class="panel-tag">8 Repositórios</span>
             </div>
 
             <div class="repo-list">
-              <a href="https://github.com/Miqueias-Henrique/Trabalho-Java" target="_blank" rel="noopener noreferrer" class="repo-card">
-                <div class="repo-card-info">
-                  <strong>Trabalho-Java ↗</strong>
-                  <span>Fundamentos do Ecossistema Java</span>
+              <a href="https://github.com/Miqueias-Henrique/api-gestao-produtos" target="_blank" rel="noopener noreferrer" class="repo-card">
+                <div class="repo-card-top">
+                  <strong>api-gestao-produtos ↗</strong>
+                  <span class="repo-badge">Node.js · TS · MySQL</span>
                 </div>
-                <span class="repo-badge">Java</span>
+                <p class="repo-card-desc">
+                  API REST em Node.js, TypeScript, Express e TypeORM com MySQL. Possui CRUD paginado para gestão de produtos, categorias, situações e usuários, migrations, seeds, validação com Yup, documentação no Swagger e suporte a Docker.
+                </p>
               </a>
 
-              <a href="https://github.com/Miqueias-Henrique/Quiz-Java" target="_blank" rel="noopener noreferrer" class="repo-card">
-                <div class="repo-card-info">
-                  <strong>Quiz-Java ↗</strong>
-                  <span>Motor de Perguntas e Respostas Dinâmico</span>
+              <a href="https://github.com/Miqueias-Henrique/vosso-cinema-api" target="_blank" rel="noopener noreferrer" class="repo-card">
+                <div class="repo-card-top">
+                  <strong>vosso-cinema-api ↗</strong>
+                  <span class="repo-badge">NestJS · Prisma · PostgreSQL</span>
                 </div>
-                <span class="repo-badge">Java</span>
+                <p class="repo-card-desc">
+                  API REST para gerenciamento de cinema (filmes, salas, sessões, ingressos e lanches) desenvolvida com NestJS, TypeScript, Prisma ORM e PostgreSQL, com validação de dados, documentação no Swagger e testes com Jest.
+                </p>
               </a>
 
-              <a href="https://github.com/Miqueias-Henrique/VITAL-CONSIOUS" target="_blank" rel="noopener noreferrer" class="repo-card">
-                <div class="repo-card-info">
-                  <strong>VITAL-CONSIOUS ↗</strong>
-                  <span>Arquitetura de Software em Saúde</span>
+              <a href="https://github.com/Miqueias-Henrique/vital-conscious-api" target="_blank" rel="noopener noreferrer" class="repo-card">
+                <div class="repo-card-top">
+                  <strong>vital-conscious-api ↗</strong>
+                  <span class="repo-badge">Java 17 · Spring Boot · JPA</span>
                 </div>
-                <span class="repo-badge">Java</span>
+                <p class="repo-card-desc">
+                  API REST universitária em Java 17, Spring Boot 3, Spring Data JPA e PostgreSQL estruturada em camadas (Controller, Service, Repository e Entity) para gestão de alunos e professores, acompanhada de diagramas e PDS.
+                </p>
+              </a>
+
+              <a href="https://github.com/Miqueias-Henrique/controle-estoque-javafx" target="_blank" rel="noopener noreferrer" class="repo-card">
+                <div class="repo-card-top">
+                  <strong>controle-estoque-javafx ↗</strong>
+                  <span class="repo-badge">Java 21 · JavaFX · JDBC</span>
+                </div>
+                <p class="repo-card-desc">
+                  Aplicação desktop em Java 21 e JavaFX para controle de estoque com interface gráfica, operações de cadastro e consulta de produtos e persistência em banco PostgreSQL utilizando JDBC e padrão DAO.
+                </p>
+              </a>
+
+              <a href="https://github.com/Miqueias-Henrique/catalogo-livros-avl-bst" target="_blank" rel="noopener noreferrer" class="repo-card">
+                <div class="repo-card-top">
+                  <strong>catalogo-livros-avl-bst ↗</strong>
+                  <span class="repo-badge">Java · Estruturas de Dados</span>
+                </div>
+                <p class="repo-card-desc">
+                  Sistema de catálogo de livros em Java comparando Árvore Binária de Busca (BST) e Árvore AVL auto-balanceada, com percursos em árvore (In-Ordem, Pré, Pós e BFS), persistência em CSV e métricas de rotações e comparações.
+                </p>
+              </a>
+
+              <a href="https://github.com/Miqueias-Henrique/tabela-hash-cpf-java" target="_blank" rel="noopener noreferrer" class="repo-card">
+                <div class="repo-card-top">
+                  <strong>tabela-hash-cpf-java ↗</strong>
+                  <span class="repo-badge">Java · Tabela Hash</span>
+                </div>
+                <p class="repo-card-desc">
+                  Implementação de Tabela Hash em Java com tratamento de colisões por encadeamento separado (LinkedList), validação de CPF e medição de desempenho (colisões, comparações e tempo de busca em nanossegundos).
+                </p>
+              </a>
+
+              <a href="https://github.com/Miqueias-Henrique/quiz-cli-java" target="_blank" rel="noopener noreferrer" class="repo-card">
+                <div class="repo-card-top">
+                  <strong>quiz-cli-java ↗</strong>
+                  <span class="repo-badge">Java 17 · Maven · JUnit 5</span>
+                </div>
+                <p class="repo-card-desc">
+                  Aplicação interativa de quiz no terminal em Java 17 estruturada com Maven, com validação segura de entradas, cálculo de pontuação e percentual de acertos e testes unitários automatizados com JUnit 5.
+                </p>
+              </a>
+
+              <a href="https://github.com/Miqueias-Henrique/vosso-cinema-web" target="_blank" rel="noopener noreferrer" class="repo-card">
+                <div class="repo-card-top">
+                  <strong>vosso-cinema-web ↗</strong>
+                  <span class="repo-badge">JS · HTML/CSS · Bootstrap 5</span>
+                </div>
+                <p class="repo-card-desc">
+                  Interface web responsiva para gestão de filmes, salas, sessões e venda de ingressos de cinema, desenvolvida com HTML5, CSS3, JavaScript (Vanilla), Bootstrap 5 e persistência local via localStorage.
+                </p>
               </a>
             </div>
 
@@ -2334,6 +2408,13 @@
       if (tabId) switchTab(tabId, document.querySelector(`.nav-btn[data-tab="${tabId}"]`));
     }
   });
+
+  (function initTabFromQuery() {
+    const t = new URLSearchParams(window.location.search).get('tab');
+    if (t && tabOrder.includes(t)) {
+      switchTab(t, document.querySelector(`.nav-btn[data-tab="${t}"]`));
+    }
+  })();
 
   // =========================================================
   // CANVAS DE TECNOLOGIA GALVANIANA (OMNIVERSE & BEN 10 GAMES)
